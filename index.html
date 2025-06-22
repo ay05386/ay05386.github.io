@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ali Youssef | Portfolio</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-T5I45yjf9FjTx6rSnpH0OYS2cj8KtyE+6Edw8XYX8kQkH2sXCBMEzMiJ2I9M28r0cftmoP5/UVP+tVgt72R+bA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Personal Info -->
+    <header id="personal-info" class="personal-info" aria-label="Personal Information">
+      <img id="profile-picture" class="profile-picture" alt="Profile Picture" />
+      <h1 id="name"></h1>
+      <h2 id="title"></h2>
+      <p id="bio"></p>
+    </header>
+
+    <!-- Technical Skills -->
+    <section id="skills-section" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Technical Skills</h2>
+      <div id="skills-container" class="skills-container"></div>
+    </section>
+
+    <!-- Work Experience -->
+    <section id="experience-section" aria-labelledby="experience-heading">
+      <h2 id="experience-heading">Work Experience</h2>
+      <div id="experience-container"></div>
+    </section>
+
+    <!-- Project Showcase -->
+    <section id="project-section" aria-labelledby="project-heading">
+      <h2 id="project-heading">Project Showcase</h2>
+      <div id="project-container"></div>
+    </section>
+  </div>
+
+  <canvas id="particle-canvas"></canvas>
+
+  <script src="script.js" defer></script>
+</body>
+</html> 

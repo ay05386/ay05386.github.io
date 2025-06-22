@@ -1,0 +1,101 @@
+{
+  "portfolio": {
+    "personalInfo": {
+      "name": "Jane Doe",
+      "title": "Full Stack Developer",
+      "bio": "Passionate about building scalable web applications and beautiful user experiences. Experienced in JavaScript, Python, and cloud technologies.",
+      "profilePictureUrl": "https://placehold.co/150x150/8A2BE2/FFFFFF?text=JD"
+    },
+    "technicalSkills": [
+      {
+        "name": "JavaScript",
+        "icon": "fab fa-js"
+      },
+      {
+        "name": "Python",
+        "icon": "fab fa-python"
+      },
+      {
+        "name": "React",
+        "icon": "fab fa-react"
+      },
+      {
+        "name": "Node.js",
+        "icon": "fab fa-node-js"
+      },
+      {
+        "name": "AWS",
+        "icon": "fab fa-aws"
+      },
+      {
+        "name": "Docker",
+        "icon": "fab fa-docker"
+      },
+      {
+        "name": "Git",
+        "icon": "fab fa-git-alt"
+      }
+    ],
+    "workExperience": [
+      {
+        "duration": "2022 - Present",
+        "position": "Senior Software Engineer",
+        "company": "TechCorp",
+        "description": "Leading a team to develop cloud-native applications and microservices."
+      },
+      {
+        "duration": "2020 - 2022",
+        "position": "Frontend Developer",
+        "company": "Webify",
+        "description": "Built interactive dashboards and improved UI/UX for SaaS products."
+      },
+      {
+        "duration": "2018 - 2020",
+        "position": "Junior Developer",
+        "company": "DevStart",
+        "description": "Assisted in front-end development and bug fixing for various client projects."
+      }
+    ],
+    "style": {
+      "general": {
+        "fontFamily": "'Inter', sans-serif",
+        "backgroundColor": "#1a1a2e",
+        "textColor": "#e0e0e0",
+        "backgroundPattern": "url('https://www.transparenttextures.com/patterns/geometric-leaves.png') repeat"
+      },
+      "container": {
+        "maxWidth": "900px",
+        "margin": "0 auto",
+        "padding": "2rem"
+      },
+      "headings": {
+        "color": "#ffffff",
+        "fontSize": "1.8rem",
+        "marginBottom": "1.5rem"
+      },
+      "profilePicture": {
+        "size": "150px",
+        "borderRadius": "50%",
+        "border": "3px solid #8A2BE2",
+        "boxShadow": "0 0 15px rgba(138, 43, 226, 0.5)"
+      },
+      "skillTag": {
+        "backgroundColor": "#8A2BE2",
+        "textColor": "#ffffff",
+        "borderRadius": "0.5rem",
+        "padding": "0.5rem 1rem",
+        "margin": "0.25rem",
+        "fontSize": "0.9rem",
+        "fontWeight": "bold"
+      },
+      "workExperienceItem": {
+        "titleColor": "#ffffff",
+        "companyColor": "#c0c0c0",
+        "durationColor": "#a0a0a0",
+        "descriptionColor": "#b0b0b0",
+        "bulletColor": "#8A2BE2",
+        "spacing": "1.5rem"
+      }
+    }
+  }
+}
