@@ -7,13 +7,13 @@ const portfolioData = {
     profilePictureUrl: "image.jpeg"
   },
   technicalSkills: [
-    { name: "Flutter", logo: "Flutter+.png" },
-    { name: "AWS", logo: "AWS+.png" },
-    { name: "Firebase", logo: "Firebase+.png" },
-    { name: "Dart", logo: "Dart+.png" },
-    { name: "Kotlin", logo: "Kotlin+.png" },
-    { name: "Node.js", logo: "Node.js+.png" },
-    { name: "More", logo: "More+.png" }
+    { name: "Flutter", icon: "fab fa-flutter" },
+    { name: "AWS", icon: "fab fa-aws" },
+    { name: "Firebase", icon: "fas fa-fire" },
+    { name: "Dart", icon: "fas fa-code" },
+    { name: "Kotlin", icon: "fab fa-korvue" },
+    { name: "Node.js", icon: "fab fa-node-js" },
+    { name: "More", icon: "fas fa-ellipsis-h" }
   ],
   workExperience: [
     {
@@ -143,23 +143,15 @@ window.addEventListener("DOMContentLoaded", () => {
 
   /* Skills */
   const skillsContainer = document.getElementById("skills-container");
-  technicalSkills.forEach(({ name, logo }) => {
+  technicalSkills.forEach(({ name, icon }) => {
     const skill = createEl("div", "skill-tag");
-    const logoImg = document.createElement("img");
-    logoImg.src = logo;
-    logoImg.alt = `${name} logo`;
-    logoImg.className = "skill-logo";
-    logoImg.onerror = function() {
-      // Fallback if logo doesn't exist
-      this.style.display = 'none';
-      // Create a text fallback
-      const fallback = document.createElement("i");
-      fallback.className = "fas fa-code";
-      fallback.style.fontSize = "24px";
-      this.parentNode.insertBefore(fallback, this);
-    };
+    
+    // Use Font Awesome icon instead of image
+    const iconEl = document.createElement("i");
+    iconEl.className = `skill-icon-fallback ${icon}`;
+    
     const nameEl = createEl("span", null, name);
-    skill.appendChild(logoImg);
+    skill.appendChild(iconEl);
     skill.appendChild(nameEl);
     skillsContainer.appendChild(skill);
   });

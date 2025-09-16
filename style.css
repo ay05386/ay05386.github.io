@@ -82,13 +82,25 @@ h2 {
   text-align: center;
   width: 100%;
   min-height: 100px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-tag:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(138, 43, 226, 0.3);
 }
 
 .skill-logo {
   width: 40px;
   height: 40px;
   object-fit: contain;
-  display: block; /* Ensures the image shows up properly */
+  display: block;
+  filter: brightness(0) invert(1); /* Makes icons white */
+}
+
+.skill-icon-fallback {
+  font-size: 32px;
+  color: white;
 }
 
 /* Demo Section */
