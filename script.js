@@ -6,14 +6,65 @@ const portfolioData = {
     bio: "I build high-performance mobile apps with Flutter that help businesses grow, engage users, and stand out in competitive markets. Every project I take on is designed to deliver measurable results, not just code.",
     profilePictureUrl: "image.jpeg"
   },
+  education: [
+    {
+      degree: "Bachelor's Degree in Computer Science",
+      institution: "Arab Academy for Science and Technology",
+      duration: "September 2018 – July 2022",
+      highlights: [
+        "Built a solid foundation in computer science principles, including software development, data structures, algorithms, and mobile computing.",
+        "Completed academic projects and real-world simulations focused on building scalable applications.",
+        "Strengthened problem-solving skills and applied efficient coding practices."
+      ]
+    },
+    {
+      degree: "Developing Mobile Applications Using Flutter",
+      institution: "Information Technology Institute (ITI)",
+      duration: "2024",
+      highlights: [
+        "Completed an intensive training program in cross-platform mobile app development with Flutter.",
+        "Developed full-featured applications with responsive UI, Firebase integration, and state management.",
+        "Enhanced debugging, performance optimization, and deployment skills."
+      ]
+    },
+    {
+      degree: "Flutter & Dart – The Complete Guide",
+      institution: "Udemy",
+      duration: "2024",
+      highlights: [
+        "Mastered Flutter and Dart for building high-performance, visually appealing mobile apps.",
+        "Worked with advanced features such as custom animations, REST API integration, and local storage.",
+        "Emphasized writing clean, maintainable, and scalable code."
+      ]
+    },
+    {
+      degree: "The Complete Android N Developer Course",
+      institution: "Udemy",
+      duration: "2019",
+      highlights: [
+        "Gained strong foundations in native Android development using Java.",
+        "Built functional and interactive Android applications with activities, fragments, and SQLite.",
+        "Integrated Google Maps and explored mobile development best practices."
+      ]
+    },
+    {
+      degree: "Build Modern Android Apps with REST API and Ktor Server",
+      institution: "Udemy",
+      duration: "2023",
+      highlights: [
+        "Focused on modern Android development with Kotlin and Jetpack Compose.",
+        "Built RESTful APIs using Ktor for robust backend integration.",
+        "Implemented clean architecture patterns and asynchronous programming for scalability and performance."
+      ]
+    }
+  ],
   technicalSkills: [
-    { name: "Flutter", icon: "fab fa-flutter" },
-    { name: "AWS", icon: "fab fa-aws" },
-    { name: "Firebase", icon: "fas fa-fire" },
-    { name: "Dart", icon: "fas fa-code" },
-    { name: "Kotlin", icon: "fab fa-korvue" },
-    { name: "Node.js", icon: "fab fa-node-js" },
-    { name: "More", icon: "fas fa-ellipsis-h" }
+    { name: "Flutter" },
+    { name: "AWS" },
+    { name: "Firebase" },
+    { name: "Dart" },
+    { name: "Kotlin" },
+    { name: "Node" }
   ],
   workExperience: [
     {
@@ -143,15 +194,17 @@ window.addEventListener("DOMContentLoaded", () => {
 
   /* Skills */
   const skillsContainer = document.getElementById("skills-container");
-  technicalSkills.forEach(({ name, icon }) => {
+  technicalSkills.forEach(({ name }) => {
     const skill = createEl("div", "skill-tag");
     
-    // Use Font Awesome icon instead of image
-    const iconEl = document.createElement("i");
-    iconEl.className = `skill-icon-fallback ${icon}`;
+    // Use PNG images for logos
+    const imgEl = document.createElement("img");
+    imgEl.src = `${name.toLowerCase()}.png`;
+    imgEl.alt = `${name} logo`;
+    imgEl.className = 'skill-logo';
     
     const nameEl = createEl("span", null, name);
-    skill.appendChild(iconEl);
+    skill.appendChild(imgEl);
     skill.appendChild(nameEl);
     skillsContainer.appendChild(skill);
   });
@@ -181,6 +234,45 @@ window.addEventListener("DOMContentLoaded", () => {
     item.appendChild(ul);
 
     expContainer.appendChild(item);
+  });
+
+  /* Education Section */
+  const educationContainer = document.getElementById("education-container");
+  portfolioData.education.forEach(({ degree, institution, duration, highlights }) => {
+    const section = document.createElement("div");
+    section.className = "education-item";
+
+    const degreeEl = document.createElement("h3");
+    degreeEl.textContent = degree;
+
+    const institutionEl = document.createElement("div");
+    institutionEl.className = "institution";
+    institutionEl.textContent = institution;
+
+    const durationEl = document.createElement("div");
+    durationEl.className = "duration";
+    durationEl.textContent = duration;
+
+    const highlightsList = document.createElement("ul");
+    highlightsList.className = "education-highlights";
+    
+    highlights.forEach(highlight => {
+      const li = document.createElement("li");
+      li.textContent = highlight;
+      highlightsList.appendChild(li);
+    });
+
+    section.appendChild(degreeEl);
+    section.appendChild(institutionEl);
+    section.appendChild(durationEl);
+    section.appendChild(highlightsList);
+    
+    // Add separator
+    const separator = document.createElement("hr");
+    separator.className = "education-separator";
+    section.appendChild(separator);
+
+    educationContainer.appendChild(section);
   });
 
   /* Project Section */

@@ -69,7 +69,8 @@ h2 {
 }
 
 .skill-tag {
-  background-color: var(--skill-bg);
+  background-color: rgba(138, 43, 226, 0.1);
+  backdrop-filter: blur(8px);
   color: var(--skill-text);
   border-radius: 0.5rem;
   padding: 1rem;
@@ -83,6 +84,7 @@ h2 {
   width: 100%;
   min-height: 100px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(138, 43, 226, 0.3);
 }
 
 .skill-tag:hover {
@@ -95,7 +97,7 @@ h2 {
   height: 40px;
   object-fit: contain;
   display: block;
-  filter: brightness(0) invert(1); /* Makes icons white */
+  margin-bottom: 8px;
 }
 
 .skill-icon-fallback {
@@ -208,6 +210,53 @@ h2 {
 
 .description {
   color: #b0b0b0;
+}
+
+/* Education Section */
+.education-item {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+}
+
+.education-item h3 {
+  color: var(--heading-color);
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.education-item .institution {
+  color: var(--primary-violet);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.education-item .duration {
+  color: #a0a0a0;
+  font-size: 0.9rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.education-highlights {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.education-highlights li {
+  color: #b0b0b0;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.education-separator {
+  border: none;
+  border-top: 1px solid rgba(138, 43, 226, 0.2);
+  margin: 2rem 0;
+}
+
+.education-item:last-child .education-separator {
+  display: none;
 }
 
 /* Project Showcase */
