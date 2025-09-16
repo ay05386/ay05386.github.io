@@ -7,13 +7,13 @@ const portfolioData = {
     profilePictureUrl: "image.jpeg"
   },
   technicalSkills: [
-    { name: "Flutter", logo: "Flutter+.png" },
-    { name: "AWS", logo: "AWS+.png" },
-    { name: "Firebase", logo: "Firebase+.png" },
-    { name: "Dart", logo: "Dart+.png" },
-    { name: "Kotlin", logo: "Kotlin+.png" },
-    { name: "Node.js", logo: "Node.js+.png" },
-    { name: "More", logo: "More+.png" }
+    { name: "Flutter", logo: "flutter.png" },
+    { name: "AWS", logo: "aws.png" },
+    { name: "Firebase", logo: "firebase.png" },
+    { name: "Dart", logo: "dart.png" },
+    { name: "Kotlin", logo: "kotlin.png" },
+    { name: "Node.js", logo: "node.png" },
+    { name: "More", logo: "node.png" } // Using node.png as fallback for More
   ],
   workExperience: [
     {
@@ -39,8 +39,8 @@ const portfolioData = {
   projectHtml: `
     <h3 class="big-project-title">Smart Pharma</h3>
     <div class="project-video">
-      <iframe src="https://player.vimeo.com/video/1119048393?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
-              allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
+      <iframe src="https://player.vimeo.com/video/1119048393?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
               title="Smart Pharma Demo"></iframe>
     </div>
     <ul>
@@ -50,8 +50,14 @@ const portfolioData = {
     </ul>
 
     <h3 class="project-title">Support Stem Education - Full-Stack Educational Platform</h3>
-    <p>Engineered a cross-platform educational platform using Flutter & Dart, delivering a high-performance mobile app for both Android and iOS users. • Designed and implemented a scalable cloud backend with AWS (Cognito, S3, API Gateway, Lambda, RDS(PostgresDB)) to support secure authentication, content management, and real-time user data synchronization. • Followed clean architecture (MVVM), OOP, and SOLID principles to produce maintainable, testable, and scalable code. • Delivered the project for a freelance client (an educational institution), where the app significantly enhanced digital learning, improved student engagement, and streamlined course delivery, resulting in a positive business impact.</p>
-    
+    <div class="support-stem-description">
+      <ul>
+        <li>• Engineered a cross-platform educational platform using Flutter & Dart, delivering a high-performance mobile app for both Android and iOS users.</li>
+        <li>• Designed and implemented a scalable cloud backend with AWS (Cognito, S3, API Gateway, Lambda, RDS(PostgresDB)) to support secure authentication, content management, and real-time user data synchronization.</li>
+        <li>• Followed clean architecture (MVVM), OOP, and SOLID principles to produce maintainable, testable, and scalable code.</li>
+        <li>• Delivered the project for a freelance client (an educational institution), where the app significantly enhanced digital learning, improved student engagement, and streamlined course delivery, resulting in a positive business impact.</li>
+      </ul>
+    </div>
     <div class="badges">
       <img src="https://img.shields.io/badge/Flutter-Expert-blue.svg" alt="Flutter badge" />
       <img src="https://img.shields.io/badge/AWS-Production%20Ready-orange.svg" alt="AWS badge" />
@@ -148,18 +154,16 @@ window.addEventListener("DOMContentLoaded", () => {
   const skillsContainer = document.getElementById("skills-container");
   technicalSkills.forEach(({ name, logo }) => {
     const skill = createEl("div", "skill-tag");
-    
     const logoImg = document.createElement("img");
     logoImg.src = logo;
     logoImg.alt = `${name} logo`;
     logoImg.className = "skill-logo";
     logoImg.onerror = function() {
-      // Fallback if logo doesn't exist
+      // Fallback if logo doesn't exist - hide image and center text
       this.style.display = 'none';
+      skill.style.justifyContent = 'center';
     };
-    
     const nameEl = createEl("span", null, name);
-    
     skill.appendChild(logoImg);
     skill.appendChild(nameEl);
     skillsContainer.appendChild(skill);

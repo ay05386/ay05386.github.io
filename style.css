@@ -96,8 +96,8 @@ h2 {
 }
 
 .demo-videos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 1.5rem;
   margin-top: 1rem;
 }
@@ -243,12 +243,30 @@ pre, code {
 /* Project section spacing tweaks */
 #project-container h3,
 #project-container h4 {
-  margin-top: 2.25rem; /* bigger separation from previous block (red lines) */
-  margin-bottom: 0.6rem; /* tighter grouping with following content (blue lines) */
+  margin-top: 2.25rem; /* bigger separation from previous block */
+  margin-bottom: 0.6rem; /* tighter grouping with following content */
 }
 
 #project-container h3:first-child {
   margin-top: 0; /* keep first heading flush */
+}
+
+/* Support Stem Education Project specific styles */
+.support-stem-description {
+  margin-bottom: 1.5rem;
+}
+
+.support-stem-description ul {
+  list-style: none;
+  padding: 0;
+}
+
+.support-stem-description li {
+  margin-bottom: 0.8rem;
+  color: #b0b0b0;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 0;
 }
 
 /* Responsive */
@@ -275,7 +293,7 @@ pre, code {
   }
 
   .demo-videos {
-    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 }
 
