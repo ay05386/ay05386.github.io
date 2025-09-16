@@ -73,7 +73,7 @@ const portfolioData = {
       company: "Self-Employed",
       bulletPoints: [
         "Developed mobile apps using Android (Java, Kotlin) and Flutter",
-        "Engineered a high-performance cross-platform educational app **Support STEM Education** using Flutter and AWS, delivering secure, scalable solutions that boosted student engagement and streamlined digital learning for a major educational client."
+        "Engineered a high-performance cross-platform educational app Support STEM Education using Flutter and AWS, delivering secure, scalable solutions that boosted student engagement and streamlined digital learning for a major educational client."
       ]
     },
     {
