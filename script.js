@@ -7,13 +7,13 @@ const portfolioData = {
     profilePictureUrl: "image.jpeg"
   },
   technicalSkills: [
-    { name: "Flutter", logo: "flutter.png" },
-    { name: "AWS", logo: "aws.png" },
-    { name: "Firebase", logo: "firebase.png" },
-    { name: "Dart", logo: "dart.png" },
-    { name: "Kotlin", logo: "kotlin.png" },
-    { name: "Node.js", logo: "node.png" },
-    { name: "More", logo: "node.png" } // Using node.png as fallback for More
+    { name: "Flutter", logo: "Flutter+.png" },
+    { name: "AWS", logo: "AWS+.png" },
+    { name: "Firebase", logo: "Firebase+.png" },
+    { name: "Dart", logo: "Dart+.png" },
+    { name: "Kotlin", logo: "Kotlin+.png" },
+    { name: "Node.js", logo: "Node.js+.png" },
+    { name: "More", logo: "More+.png" }
   ],
   workExperience: [
     {
@@ -22,7 +22,7 @@ const portfolioData = {
       company: "Self-Employed",
       bulletPoints: [
         "Developed mobile apps using Android (Java, Kotlin) and Flutter",
-        "Engineered a high-performance cross-platform educational app **Support STEM Education** using Flutter and AWS, delivering secure, scalable solutions that boosted student engagement and streamlined digital learning for a major educational client."
+        "Engineered a high-performance cross-platform educational app Support STEM Education using Flutter and AWS, delivering secure, scalable solutions that boosted student engagement and streamlined digital learning for a major educational client."
       ]
     },
     {
@@ -49,15 +49,6 @@ const portfolioData = {
       <li>• Employed Firebase for authentication and database storage in Smart Pharma, enhancing data security and user experience with cloud-based services. Additionally, integrated AI components for prescription reading.</li>
     </ul>
 
-    <h3 class="project-title">Support Stem Education - Full-Stack Educational Platform</h3>
-    <div class="support-stem-description">
-      <ul>
-        <li>• Engineered a cross-platform educational platform using Flutter & Dart, delivering a high-performance mobile app for both Android and iOS users.</li>
-        <li>• Designed and implemented a scalable cloud backend with AWS (Cognito, S3, API Gateway, Lambda, RDS(PostgresDB)) to support secure authentication, content management, and real-time user data synchronization.</li>
-        <li>• Followed clean architecture (MVVM), OOP, and SOLID principles to produce maintainable, testable, and scalable code.</li>
-        <li>• Delivered the project for a freelance client (an educational institution), where the app significantly enhanced digital learning, improved student engagement, and streamlined course delivery, resulting in a positive business impact.</li>
-      </ul>
-    </div>
     <div class="badges">
       <img src="https://img.shields.io/badge/Flutter-Expert-blue.svg" alt="Flutter badge" />
       <img src="https://img.shields.io/badge/AWS-Production%20Ready-orange.svg" alt="AWS badge" />
@@ -159,9 +150,13 @@ window.addEventListener("DOMContentLoaded", () => {
     logoImg.alt = `${name} logo`;
     logoImg.className = "skill-logo";
     logoImg.onerror = function() {
-      // Fallback if logo doesn't exist - hide image and center text
+      // Fallback if logo doesn't exist
       this.style.display = 'none';
-      skill.style.justifyContent = 'center';
+      // Create a text fallback
+      const fallback = document.createElement("i");
+      fallback.className = "fas fa-code";
+      fallback.style.fontSize = "24px";
+      this.parentNode.insertBefore(fallback, this);
     };
     const nameEl = createEl("span", null, name);
     skill.appendChild(logoImg);
