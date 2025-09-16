@@ -3,17 +3,17 @@ const portfolioData = {
   personalInfo: {
     name: "Ali Youssef",
     title: "Mobile Developer",
-    bio: "I am a passionate Mobile Developer dedicated to creating seamless, user-friendly mobile applications. Driven by continuous learning and a deep interest in the latest industry trends, I strive for excellence in every project.",
+    bio: "I build high-performance mobile apps with Flutter that help businesses grow, engage users, and stand out in competitive markets. Every project I take on is designed to deliver measurable results, not just code.",
     profilePictureUrl: "image.jpeg"
   },
   technicalSkills: [
-    { name: "Flutter", icon: "fas fa-mobile-screen-button" },
-    { name: "AWS", icon: "fab fa-aws" },
-    { name: "Firebase", icon: "fas fa-fire" },
-    { name: "Dart", icon: "fas fa-code" },
-    { name: "Kotlin", icon: "fas fa-code" },
-    { name: "JavaScript", icon: "fab fa-js" },
-    { name: "More", icon: "fas fa-ellipsis-h" }
+    { name: "Flutter", logo: "Flutter+.png" },
+    { name: "AWS", logo: "AWS+.png" },
+    { name: "Firebase", logo: "Firebase+.png" },
+    { name: "Dart", logo: "Dart+.png" },
+    { name: "Kotlin", logo: "Kotlin+.png" },
+    { name: "Node.js", logo: "Node.js+.png" },
+    { name: "More", logo: "More+.png" }
   ],
   workExperience: [
     {
@@ -22,7 +22,7 @@ const portfolioData = {
       company: "Self-Employed",
       bulletPoints: [
         "Developed mobile apps using Android (Java, Kotlin) and Flutter",
-        "Completed the Return Pharma project in 17 hours, demonstrating strong problem-solving under pressure"
+        "Engineered a high-performance cross-platform educational app **Support STEM Education** using Flutter and AWS, delivering secure, scalable solutions that boosted student engagement and streamlined digital learning for a major educational client."
       ]
     },
     {
@@ -37,14 +37,28 @@ const portfolioData = {
     }
   ],
   projectHtml: `
-    <h3>Inspire Training Center - Full-Stack Educational Platform</h3>
+    <h3 class="big-project-title">Smart Pharma</h3>
+    <div class="project-video">
+      <iframe src="https://player.vimeo.com/video/1119048393?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" 
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write" 
+              title="Smart Pharma Demo"></iframe>
+    </div>
+    <ul>
+      <li>• Developed Smart Pharma, an Android pharmacy app, showcasing adeptness in modern mobile app development.</li>
+      <li>• Utilized [Java, XML, Firebase, MVVM architecture, and more] to efficiently manage inventory and prescriptions.</li>
+      <li>• Employed Firebase for authentication and database storage in Smart Pharma, enhancing data security and user experience with cloud-based services. Additionally, integrated AI components for prescription reading.</li>
+    </ul>
+
+    <h3 class="project-title">Support Stem Education - Full-Stack Educational Platform</h3>
+    <p>Engineered a cross-platform educational platform using Flutter & Dart, delivering a high-performance mobile app for both Android and iOS users. • Designed and implemented a scalable cloud backend with AWS (Cognito, S3, API Gateway, Lambda, RDS(PostgresDB)) to support secure authentication, content management, and real-time user data synchronization. • Followed clean architecture (MVVM), OOP, and SOLID principles to produce maintainable, testable, and scalable code. • Delivered the project for a freelance client (an educational institution), where the app significantly enhanced digital learning, improved student engagement, and streamlined course delivery, resulting in a positive business impact.</p>
+    
     <div class="badges">
       <img src="https://img.shields.io/badge/Flutter-Expert-blue.svg" alt="Flutter badge" />
       <img src="https://img.shields.io/badge/AWS-Production%20Ready-orange.svg" alt="AWS badge" />
       <img src="https://img.shields.io/badge/Live%20Demo-Available-green.svg" alt="Live Demo badge" />
       <img src="https://img.shields.io/badge/Client%20Rating-5%E2%98%85-gold.svg" alt="Client Rating badge" />
     </div>
-    <blockquote>\"Transformed a traditional training center into a modern digital learning ecosystem, serving 500+ students with 99.9% uptime and zero security breaches.\"</blockquote>
+    <blockquote>"Transformed a traditional training center into a modern digital learning ecosystem, serving 500+ students with 99.9% uptime and zero security breaches."</blockquote>
 
     <h4>Business Impact Delivered</h4>
     <ul>
@@ -98,7 +112,7 @@ Analytics:   AWS CloudWatch + X-Ray
     </ul>
 
     <h4>Client Testimonial</h4>
-    <blockquote>_\"Ali delivered beyond our wildest expectations. The app transformed our business model and opened new revenue streams we hadn't even considered. His technical expertise, combined with genuine business understanding, made him feel like part of our team rather than just a contractor.\"_ – <strong>Mohamed Al-Rashid, CEO, Inspire Training Center</strong></blockquote>
+    <blockquote><em>"Ali delivered beyond our wildest expectations. The app transformed our business model and opened new revenue streams we hadn't even considered. His technical expertise, combined with genuine business understanding, made him feel like part of our team rather than just a contractor."</em> – <strong>Mohamed Al-Rashid, CEO, Inspire Training Center</strong></blockquote>
 
     <p><strong>Ready to transform your business with a custom digital solution? Let's discuss how I can help you achieve similar results.</strong></p>
     <p><strong>Email:</strong> ay05386@gmail.com<br/>
@@ -132,11 +146,22 @@ window.addEventListener("DOMContentLoaded", () => {
 
   /* Skills */
   const skillsContainer = document.getElementById("skills-container");
-  technicalSkills.forEach(({ name, icon }) => {
-    const skill = createEl("span", "skill-tag");
-    const iconEl = createEl("i", icon);
-    skill.appendChild(iconEl);
-    skill.appendChild(document.createTextNode(name));
+  technicalSkills.forEach(({ name, logo }) => {
+    const skill = createEl("div", "skill-tag");
+    
+    const logoImg = document.createElement("img");
+    logoImg.src = logo;
+    logoImg.alt = `${name} logo`;
+    logoImg.className = "skill-logo";
+    logoImg.onerror = function() {
+      // Fallback if logo doesn't exist
+      this.style.display = 'none';
+    };
+    
+    const nameEl = createEl("span", null, name);
+    
+    skill.appendChild(logoImg);
+    skill.appendChild(nameEl);
     skillsContainer.appendChild(skill);
   });
 
@@ -158,7 +183,8 @@ window.addEventListener("DOMContentLoaded", () => {
     // Bullet list of responsibilities
     const ul = createEl("ul", "responsibilities");
     bulletPoints.forEach(point => {
-      const li = createEl("li", null, point);
+      const li = createEl("li");
+      li.innerHTML = point; // Use innerHTML to support markdown-style bold text
       ul.appendChild(li);
     });
     item.appendChild(ul);
@@ -282,4 +308,4 @@ window.addEventListener("DOMContentLoaded", () => {
     requestAnimationFrame(step);
   }
   step();
-})(); 
+})();
