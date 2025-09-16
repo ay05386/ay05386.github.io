@@ -22,7 +22,7 @@ const portfolioData = {
       company: "Self-Employed",
       bulletPoints: [
         "Developed mobile apps using Android (Java, Kotlin) and Flutter",
-        "Engineered a high-performance cross-platform educational app Support STEM Education using Flutter and AWS, delivering secure, scalable solutions that boosted student engagement and streamlined digital learning for a major educational client."
+        "Engineered a high-performance cross-platform educational app **Support STEM Education** using Flutter and AWS, delivering secure, scalable solutions that boosted student engagement and streamlined digital learning for a major educational client."
       ]
     },
     {
@@ -37,18 +37,6 @@ const portfolioData = {
     }
   ],
   projectHtml: `
-    <h3 class="big-project-title">Smart Pharma</h3>
-    <div class="project-video">
-      <iframe src="https://player.vimeo.com/video/1119048393?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-              allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-              title="Smart Pharma Demo"></iframe>
-    </div>
-    <ul>
-      <li>• Developed Smart Pharma, an Android pharmacy app, showcasing adeptness in modern mobile app development.</li>
-      <li>• Utilized [Java, XML, Firebase, MVVM architecture, and more] to efficiently manage inventory and prescriptions.</li>
-      <li>• Employed Firebase for authentication and database storage in Smart Pharma, enhancing data security and user experience with cloud-based services. Additionally, integrated AI components for prescription reading.</li>
-    </ul>
-
     <div class="badges">
       <img src="https://img.shields.io/badge/Flutter-Expert-blue.svg" alt="Flutter badge" />
       <img src="https://img.shields.io/badge/AWS-Production%20Ready-orange.svg" alt="AWS badge" />
@@ -110,6 +98,18 @@ Analytics:   AWS CloudWatch + X-Ray
 
     <h4>Client Testimonial</h4>
     <blockquote><em>"Ali delivered beyond our wildest expectations. The app transformed our business model and opened new revenue streams we hadn't even considered. His technical expertise, combined with genuine business understanding, made him feel like part of our team rather than just a contractor."</em> – <strong>Mohamed Al-Rashid, CEO, Inspire Training Center</strong></blockquote>
+
+    <h3 class="big-project-title">Smart Pharma</h3>
+    <div class="project-video">
+      <iframe src="https://player.vimeo.com/video/1119048393?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+              allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+              title="Smart Pharma Demo"></iframe>
+    </div>
+    <ul>
+      <li>• Developed Smart Pharma, an Android pharmacy app, showcasing adeptness in modern mobile app development.</li>
+      <li>• Utilized [Java, XML, Firebase, MVVM architecture, and more] to efficiently manage inventory and prescriptions.</li>
+      <li>• Employed Firebase for authentication and database storage in Smart Pharma, enhancing data security and user experience with cloud-based services. Additionally, integrated AI components for prescription reading.</li>
+    </ul>
 
     <p><strong>Ready to transform your business with a custom digital solution? Let's discuss how I can help you achieve similar results.</strong></p>
     <p><strong>Email:</strong> ay05386@gmail.com<br/>
