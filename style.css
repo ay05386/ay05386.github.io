@@ -8,21 +8,21 @@
   --skill-text: #ffffff;
   --font-body: 'Inter', sans-serif;
 }
-
+  
 /* Base */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
+  
 body {
   font-family: var(--font-body);
   background: var(--bg-dark) url("https://www.transparenttextures.com/patterns/geometric-leaves.png") repeat;
   color: var(--text-light);
   line-height: 1.6;
 }
-
+  
 .container {
   max-width: 900px;
   margin: 0 auto;
@@ -30,26 +30,26 @@ body {
   position: relative;
   z-index: 1;
 }
-
+  
 h1, h2, h3, h4, h5, h6 {
   color: var(--heading-color);
   margin-bottom: 1.5rem;
 }
-
+  
 h1 {
   font-size: 2rem;
 }
-
+  
 h2 {
   font-size: 1.8rem;
 }
-
+  
 /* Personal Info */
 .personal-info {
   text-align: center;
   margin-bottom: 3rem;
 }
-
+  
 .profile-picture {
   width: 150px;
   height: 150px;
@@ -59,7 +59,7 @@ h2 {
   object-fit: cover;
   margin-bottom: 1rem;
 }
-
+  
 /* Skills */
 .skills-container {
   display: grid;
@@ -67,7 +67,7 @@ h2 {
   gap: 1rem;
   justify-items: center;
 }
-
+  
 .skill-tag {
   background-color: rgba(138, 43, 226, 0.1);
   backdrop-filter: blur(8px);
@@ -86,12 +86,12 @@ h2 {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border: 1px solid rgba(138, 43, 226, 0.3);
 }
-
+  
 .skill-tag:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(138, 43, 226, 0.3);
 }
-
+  
 .skill-logo {
   width: 40px;
   height: 40px;
@@ -99,24 +99,24 @@ h2 {
   display: block;
   margin-bottom: 8px;
 }
-
+  
 .skill-icon-fallback {
   font-size: 32px;
   color: white;
 }
-
+  
 /* Demo Section */
 .demo-section {
   margin-bottom: 3rem;
 }
-
+  
 .demo-videos {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   margin-top: 1rem;
 }
-
+  
 .demo-video {
   position: relative;
   padding-bottom: 56.25%; /* 16:9 aspect ratio */
@@ -124,7 +124,7 @@ h2 {
   overflow: hidden;
   border-radius: 8px;
 }
-
+  
 .demo-video iframe {
   position: absolute;
   top: 0;
@@ -133,41 +133,40 @@ h2 {
   height: 100%;
   border: none;
 }
-
+  
 .project-title {
-  font-size: 1.8rem !important;
+  font-size: 1.4rem !important;
   margin-top: 2rem !important;
   margin-bottom: 1rem !important;
-  text-align: center;
+  text-align: left;
+  color: var(--primary-violet);
 }
 
 .project-list {
   margin-left: 1.25rem;
   margin-top: 0.5rem;
-}
-
-.project-list li {
+}.project-list li {
   margin-bottom: 0.8rem;
   color: #b0b0b0;
   list-style-type: disc;
 }
-
+  
 /* Work Experience */
 #experience-container {
   display: flex;
   flex-direction: column;
 }
-
+  
 .work-experience-item {
   margin-bottom: 1.5rem;
   position: relative;
   padding-left: 1.5rem;
 }
-
+  
 .work-experience-item::before {
   content: none; /* remove previous bullet */
 }
-
+  
 .title-line {
   display: flex;
   justify-content: space-between;
@@ -175,72 +174,92 @@ h2 {
   align-items: baseline;
   margin-bottom: 0.25rem;
 }
-
+  
 .job-title {
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-size: 1.4rem;
+  font-weight: 700;
   color: var(--heading-color);
+  margin-bottom: 0.25rem;
 }
 
+.project-subtitle {
+  font-size: 1rem;
+  color: var(--primary-violet);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+  
 .title-line .duration {
   color: #a0a0a0;
   font-size: 0.9rem;
 }
-
+  
 .responsibilities {
   margin-left: 1.25rem;
   margin-top: 0.5rem;
 }
-
+  
 .responsibilities li {
   margin-bottom: 0.4rem;
   color: #b0b0b0;
 }
-
+  
 .company-name {
   color: #c0c0c0;
   font-weight: 600;
 }
-
+  
 .duration {
   color: #a0a0a0;
   font-size: 0.9rem;
   margin-bottom: 0.5rem;
 }
-
+  
 .description {
   color: #b0b0b0;
 }
+  
+/* Education Section - Card Style */
+#education-section {
+  margin-bottom: 3rem;
+}
 
-/* Education Section */
 .education-item {
-  margin-bottom: 2rem;
-  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  background: rgba(138, 43, 226, 0.05);
+  border-left: 4px solid var(--primary-violet);
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(138, 43, 226, 0.2);
 }
 
 .education-item h3 {
   color: var(--heading-color);
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
 
 .education-item .institution {
   color: var(--primary-violet);
   font-weight: 600;
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
 }
 
 .education-item .duration {
   color: #a0a0a0;
   font-size: 0.9rem;
-  font-style: italic;
   margin-bottom: 1rem;
 }
 
 .education-highlights {
   list-style-type: disc;
   margin-left: 1.5rem;
-  margin-bottom: 1.5rem;
 }
 
 .education-highlights li {
@@ -250,31 +269,77 @@ h2 {
 }
 
 .education-separator {
-  border: none;
-  border-top: 1px solid rgba(138, 43, 226, 0.2);
-  margin: 2rem 0;
+  display: none; /* Remove separators since we're using cards */
+}
+  
+/* Certificates Section */
+#certificates-section {
+  margin-bottom: 3rem;
+}
+  
+.certificate-item {
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  background: rgba(138, 43, 226, 0.05);
+  border-left: 4px solid var(--primary-violet);
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+  
+.certificate-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(138, 43, 226, 0.2);
+}
+  
+.certificate-item h3 {
+  color: var(--heading-color);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+  
+.certificate-item .provider {
+  color: var(--primary-violet);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+  
+.certificate-item .year {
+  color: #a0a0a0;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+  
+.certificate-item .description {
+  color: #b0b0b0;
+  line-height: 1.5;
 }
 
-.education-item:last-child .education-separator {
-  display: none;
+/* Support Stem Education Title */
+.support-stem-title {
+  font-size: 1.8rem !important;
+  margin-top: 1rem !important;
+  margin-bottom: 1.5rem !important;
+  text-align: center;
+  color: var(--primary-violet);
+  font-weight: 600;
 }
-
+  
 /* Project Showcase */
 #project-container {
   margin-top: 2rem;
 }
-
+  
 #project-container img {
   max-width: 100%;
 }
-
+  
 .badges {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
   margin-bottom: 1rem;
 }
-
+  
 .project-video {
   position: relative;
   padding-bottom: 56.25%; /* 16:9 aspect ratio */
@@ -283,7 +348,7 @@ h2 {
   border-radius: 8px;
   margin: 1rem 0;
 }
-
+  
 .project-video iframe {
   position: absolute;
   top: 0;
@@ -292,13 +357,15 @@ h2 {
   height: 100%;
   border: none;
 }
-
+  
 .big-project-title {
-  font-size: 1.8rem !important;
+  font-size: 1.6rem !important;
   margin-top: 2rem !important;
   margin-bottom: 1rem !important;
+  text-align: left !important;
+  color: var(--primary-violet) !important;
 }
-
+  
 blockquote {
   border-left: 4px solid var(--primary-violet);
   padding-left: 1rem;
@@ -306,7 +373,7 @@ blockquote {
   color: #d0d0d0;
   font-style: italic;
 }
-
+  
 pre, code {
   background-color: #22223b;
   color: #f8f8f2;
@@ -314,42 +381,55 @@ pre, code {
   border-radius: 4px;
   overflow-x: auto;
 }
-
+  
 /* Project section spacing tweaks */
 #project-container h3,
 #project-container h4 {
   margin-top: 2.25rem; /* bigger separation from previous block (red lines) */
   margin-bottom: 0.6rem; /* tighter grouping with following content (blue lines) */
+  text-align: left; /* Move project titles to the left */
+  font-size: 1.6rem !important; /* Make project titles slightly larger */
+  color: var(--primary-violet) !important; /* Make project titles purple */
 }
-
+  
 #project-container h3:first-child {
   margin-top: 0; /* keep first heading flush */
 }
-
+  
 /* Responsive */
 @media (max-width: 600px) {
   .container {
     padding: 1rem;
   }
-
+  
   h1 {
     font-size: 1.6rem;
   }
-
+  
   h2 {
     font-size: 1.4rem;
   }
-
+  
   .profile-picture {
     width: 120px;
     height: 120px;
   }
-
+  
   .skills-container {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   }
-}
 
+  .job-title {
+    font-size: 1.2rem;
+  }
+
+  .big-project-title,
+  #project-container h3,
+  #project-container h4 {
+    text-align: left !important; /* Keep left alignment on mobile for consistency */
+  }
+}
+  
 #particle-canvas {
   position: fixed;
   top: 0;
@@ -359,7 +439,7 @@ pre, code {
   pointer-events: none;
   z-index: 0;
 }
-
+  
 /* elevate content */
 .container {
   position: relative;

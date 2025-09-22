@@ -8,9 +8,9 @@ const portfolioData = {
   },
   education: [
     {
-      degree: "Bachelor's Degree in Computer Science",
-      institution: "Arab Academy for Science and Technology",
-      duration: "September 2018 – July 2022",
+      degree: "Bachelor Degree in Computer Science",
+      institution: "Arab Academy for Science And Technology",
+      duration: "September 2018 - July 2022",
       highlights: [
         "Built a solid foundation in computer science principles, including software development, data structures, algorithms, and mobile computing.",
         "Completed academic projects and real-world simulations focused on building scalable applications.",
@@ -19,43 +19,33 @@ const portfolioData = {
     },
     {
       degree: "Developing Mobile Applications Using Flutter",
-      institution: "Information Technology Institute (ITI)",
+      institution: "ITI – Information Technology Institute",
       duration: "2024",
       highlights: [
         "Completed an intensive training program in cross-platform mobile app development with Flutter.",
         "Developed full-featured applications with responsive UI, Firebase integration, and state management.",
         "Enhanced debugging, performance optimization, and deployment skills."
       ]
+    }
+  ],
+  certificates: [
+    {
+      title: "Flutter & Dart - The Complete Guide",
+      provider: "Udemy",
+      year: "2024",
+      description: "Mastered Flutter and Dart for building high-performance, visually appealing mobile apps. Worked with advanced features such as custom animations, REST API integration, and local storage."
     },
     {
-      degree: "Flutter & Dart – The Complete Guide",
-      institution: "Udemy",
-      duration: "2024",
-      highlights: [
-        "Mastered Flutter and Dart for building high-performance, visually appealing mobile apps.",
-        "Worked with advanced features such as custom animations, REST API integration, and local storage.",
-        "Emphasized writing clean, maintainable, and scalable code."
-      ]
+      title: "The Complete Android N Developer Course",
+      provider: "Udemy",
+      year: "2019",
+      description: "Gained strong foundations in native Android development using Java. Built functional and interactive Android applications with activities, fragments, and SQLite."
     },
     {
-      degree: "The Complete Android N Developer Course",
-      institution: "Udemy",
-      duration: "2019",
-      highlights: [
-        "Gained strong foundations in native Android development using Java.",
-        "Built functional and interactive Android applications with activities, fragments, and SQLite.",
-        "Integrated Google Maps and explored mobile development best practices."
-      ]
-    },
-    {
-      degree: "Build Modern Android Apps with REST API and Ktor Server",
-      institution: "Udemy",
-      duration: "2023",
-      highlights: [
-        "Focused on modern Android development with Kotlin and Jetpack Compose.",
-        "Built RESTful APIs using Ktor for robust backend integration.",
-        "Implemented clean architecture patterns and asynchronous programming for scalability and performance."
-      ]
+      title: "Build Modern Android App with REST API and Ktor Server",
+      provider: "Udemy",
+      year: "2023",
+      description: "Focused on modern Android development with Kotlin and Jetpack Compose. Built RESTful APIs using Ktor for robust backend integration."
     }
   ],
   technicalSkills: [
@@ -68,22 +58,47 @@ const portfolioData = {
   ],
   workExperience: [
     {
-      duration: "February 2024 – Present",
-      position: "Freelance Mobile Developer",
-      company: "Self-Employed",
+      duration: "February 2025 – Present",
+      position: "Flutter Developer",
+      company: "Inspire training institution",
+      project: "Support Stem Education",
       bulletPoints: [
-        "Developed mobile apps using Android (Java, Kotlin) and Flutter",
-        "Engineered a high-performance cross-platform educational app Support STEM Education using Flutter and AWS, delivering secure, scalable solutions that boosted student engagement and streamlined digital learning for a major educational client."
+        "Engineered a cross-platform educational platform using Flutter & Dart, delivering a high-performance mobile app for both Android and iOS users.",
+        "Designed and implemented a scalable cloud backend with AWS (Cognito, S3, API Gateway, Lambda, RDS(PostgresDB)) to support secure authentication, content management, and real-time user data synchronization.",
+        "Followed clean architecture (MVVM), OOP, and SOLID principles to produce maintainable, testable, and scalable code.",
+        "Developed a comprehensive admin dashboard for content and user management, enabling administrators to oversee courses, students, and materials seamlessly.",
+        "Integrated key third-party services to build a rich learning environment, including Agora.io for low-latency live video lectures and Vimeo Pro for secure video-on-demand streaming.",
+        "Maintained and optimized the educational platform's AWS infrastructure, ensuring 99.9% uptime for 500+ daily active users through proactive monitoring of Lambda functions, RDS database performance, and S3 storage utilization."
       ]
     },
     {
-      duration: "January 2023 – February 2024",
+      duration: "January 2023 – February 2025",
       position: "Android Developer",
       company: "Blue Bird",
+      project: "",
       bulletPoints: [
-        "Developed and maintained high-performance Android applications using Kotlin, Jetpack Compose, Room, and Firebase, ensuring scalability and optimal user experience.",
-        "Integrated REST APIs, implemented authentication and optimized app architecture using MVVM and Dagger for efficient DI.",
-        "Collaborated with cross-functional teams to design, test, and deploy feature-rich mobile applications, following industry best practices."
+        {
+          project: "Smart Pharma",
+          details: [
+            "Developed Smart Pharma, an Android pharmacy app, showcasing adeptness in modern mobile app development.",
+            "Utilized [Java, XML, Firebase, MVVM architecture, and more] to efficiently manage inventory and prescriptions.",
+            "Employed Firebase for authentication and database storage in Smart Pharma, enhancing data security and user experience with cloud-based services. Additionally, integrated AI components for prescription reading."
+          ]
+        },
+        {
+          project: "Return Pharma",
+          details: [
+            "Developed a full-featured Android application in just 17 hours, showcasing strong time management and the ability to work under pressure. The app allows users to log in, create, update, and track return requests using Kotlin, Jetpack Compose, and RESTful APIs.",
+            "Implemented user authentication and API integration for seamless communication with backend services, leveraging Bearer Token authorization and industry-standard UI components to enhance user experience and performance."
+          ]
+        },
+        {
+          project: "Real Home",
+          details: [
+            "Still Engineering Real Home, an Android real estate application, showcasing expertise in modern mobile app development.",
+            "Utilized [Kotlin, Jetpack Compose, Ktor RestApi, Dagger Hilt Dependency injection ,MVVM architecture and more] to ensure a smooth user experience. aligning with cutting-edge industry standards."
+          ]
+        }
       ]
     }
   ],
@@ -95,7 +110,7 @@ const portfolioData = {
       <img src="https://img.shields.io/badge/Client%20Rating-5%E2%98%85-gold.svg" alt="Client Rating badge" />
     </div>
     <blockquote>"Transformed a traditional training center into a modern digital learning ecosystem, serving 500+ students with 99.9% uptime and zero security breaches."</blockquote>
-
+  
     <h4>Business Impact Delivered</h4>
     <ul>
       <li><strong>300% increase</strong> in student engagement</li>
@@ -104,7 +119,7 @@ const portfolioData = {
       <li><strong>Expanded reach</strong> from local to international students</li>
       <li><strong>Cross-platform presence</strong> on iOS, Android, and Web</li>
     </ul>
-
+  
     <h4>Enterprise-Grade Security</h4>
     <pre><code>
 ✅ Role-based access control (Admin/Teacher/Student)
@@ -113,7 +128,7 @@ const portfolioData = {
 ✅ Encrypted file storage and transmission
 ✅ GDPR-compliant data handling
     </code></pre>
-
+  
     <h4>Scalable Architecture Built for Growth</h4>
     <ul>
       <li><strong>Handles 1000+ concurrent users</strong> without performance degradation</li>
@@ -121,7 +136,7 @@ const portfolioData = {
       <li><strong>Cloud-native AWS infrastructure</strong> with auto-scaling capabilities</li>
       <li><strong>99.9% uptime</strong> with robust error handling and monitoring</li>
     </ul>
-
+  
     <h4>Advanced Media Solutions</h4>
     <ul>
       <li><strong>Premium Video Streaming</strong> via Vimeo Pro integration</li>
@@ -129,7 +144,7 @@ const portfolioData = {
       <li><strong>Offline-first approach</strong> for uninterrupted learning</li>
       <li><strong>Adaptive bitrate streaming</strong> for all connection speeds</li>
     </ul>
-
+  
     <h4>Modern Tech Stack</h4>
     <pre><code>
 Frontend:    Flutter 3.x (iOS/Android/Web)
@@ -138,7 +153,7 @@ Video:       Vimeo Pro + Agora.io
 Storage:     AWS S3 + CloudFront CDN
 Analytics:   AWS CloudWatch + X-Ray
     </code></pre>
-
+  
     <h4>Performance Metrics</h4>
     <ul>
       <li><strong>&lt;2s app launch time</strong> on all devices</li>
@@ -146,10 +161,10 @@ Analytics:   AWS CloudWatch + X-Ray
       <li><strong>&lt;5s video start time</strong> with adaptive streaming</li>
       <li><strong>Works seamlessly</strong> on devices from iPhone 6 to latest Android</li>
     </ul>
-
+  
     <h4>Client Testimonial</h4>
     <blockquote><em>"Ali delivered beyond our wildest expectations. The app transformed our business model and opened new revenue streams we hadn't even considered. His technical expertise, combined with genuine business understanding, made him feel like part of our team rather than just a contractor."</em> – <strong>Mohamed Al-Rashid, CEO, Inspire Training Center</strong></blockquote>
-
+  
     <h3 class="big-project-title">Smart Pharma</h3>
     <div class="project-video">
       <iframe src="https://player.vimeo.com/video/1119048393?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
@@ -161,13 +176,13 @@ Analytics:   AWS CloudWatch + X-Ray
       <li>• Utilized [Java, XML, Firebase, MVVM architecture, and more] to efficiently manage inventory and prescriptions.</li>
       <li>• Employed Firebase for authentication and database storage in Smart Pharma, enhancing data security and user experience with cloud-based services. Additionally, integrated AI components for prescription reading.</li>
     </ul>
-
+  
     <p><strong>Ready to transform your business with a custom digital solution? Let's discuss how I can help you achieve similar results.</strong></p>
     <p><strong>Email:</strong> ay05386@gmail.com<br/>
     <strong>WhatsApp:</strong> +201207767340</p>
   `
 };
-
+  
 // Helper to create elements with classes
 function createEl(tag, className, text) {
   const el = document.createElement(tag);
@@ -175,123 +190,169 @@ function createEl(tag, className, text) {
   if (text) el.textContent = text;
   return el;
 }
-
+  
 // Populate DOM after document ready
 window.addEventListener("DOMContentLoaded", () => {
   /* Personal Info */
-  const { personalInfo, technicalSkills, workExperience, projectHtml } = portfolioData;
-
+  const { personalInfo, technicalSkills, workExperience, education, certificates, projectHtml } = portfolioData;
+  
   const img = document.getElementById("profile-picture");
   const nameEl = document.getElementById("name");
   const titleEl = document.getElementById("title");
   const bioEl = document.getElementById("bio");
-
+  
   img.src = personalInfo.profilePictureUrl;
   img.alt = `${personalInfo.name} picture`;
   nameEl.textContent = personalInfo.name;
   titleEl.textContent = personalInfo.title;
   bioEl.textContent = personalInfo.bio;
-
+  
   /* Skills */
   const skillsContainer = document.getElementById("skills-container");
   technicalSkills.forEach(({ name }) => {
     const skill = createEl("div", "skill-tag");
-    
     // Use PNG images for logos
     const imgEl = document.createElement("img");
     imgEl.src = `${name.toLowerCase()}.png`;
     imgEl.alt = `${name} logo`;
     imgEl.className = 'skill-logo';
-    
     const nameEl = createEl("span", null, name);
     skill.appendChild(imgEl);
     skill.appendChild(nameEl);
     skillsContainer.appendChild(skill);
   });
-
+  
   /* Work Experience */
   const expContainer = document.getElementById("experience-container");
-  workExperience.forEach(({ duration, position, company, bulletPoints }) => {
+  workExperience.forEach((exp) => {
+    const { duration, position, company, project, bulletPoints } = exp;
     const item = createEl("div", "work-experience-item");
-
+  
     // Title line: job title (+company) and duration
     const titleLine = createEl("div", "title-line");
-    const jobTitleText = `${position}${company ? (position.includes(company) ? "" : " @ " + company) : ""}`;
+    const jobTitleText = `${position}${company ? " @ " + company : ""}`;
     const jobTitleEl = createEl("span", "job-title", jobTitleText);
     const durationEl = createEl("span", "duration", duration);
-
+  
     titleLine.appendChild(jobTitleEl);
     titleLine.appendChild(durationEl);
     item.appendChild(titleLine);
 
-    // Bullet list of responsibilities
-    const ul = createEl("ul", "responsibilities");
-    bulletPoints.forEach(point => {
-      const li = createEl("li");
-      li.innerHTML = point; // Use innerHTML to support markdown-style bold text
-      ul.appendChild(li);
-    });
-    item.appendChild(ul);
-
+    // Add project subtitle for Support Stem Education
+    if (project) {
+      const projectSubtitle = createEl("div", "project-subtitle", project);
+      item.appendChild(projectSubtitle);
+    }
+  
+    // Handle different bullet point structures
+    if (Array.isArray(bulletPoints) && typeof bulletPoints[0] === 'string') {
+      // Simple bullet points (like first job)
+      const ul = createEl("ul", "responsibilities");
+      bulletPoints.forEach(point => {
+        const li = createEl("li");
+        li.innerHTML = point; // Use innerHTML to support markdown-style bold text
+        ul.appendChild(li);
+      });
+      item.appendChild(ul);
+    } else if (Array.isArray(bulletPoints) && typeof bulletPoints[0] === 'object') {
+      // Project-based bullet points (like second job)
+      bulletPoints.forEach(projectData => {
+        // Project title
+        const projectTitle = createEl("h4", "project-title", projectData.project);
+        item.appendChild(projectTitle);
+        // Project details
+        const ul = createEl("ul", "responsibilities");
+        projectData.details.forEach(detail => {
+          const li = createEl("li");
+          li.innerHTML = detail;
+          ul.appendChild(li);
+        });
+        item.appendChild(ul);
+      });
+    }
+  
     expContainer.appendChild(item);
   });
-
-  /* Education Section */
+  
+  /* Education Section - Card Style */
   const educationContainer = document.getElementById("education-container");
-  portfolioData.education.forEach(({ degree, institution, duration, highlights }) => {
+  education.forEach(({ degree, institution, duration, highlights }) => {
     const section = document.createElement("div");
     section.className = "education-item";
-
+  
     const degreeEl = document.createElement("h3");
     degreeEl.textContent = degree;
-
+  
     const institutionEl = document.createElement("div");
     institutionEl.className = "institution";
     institutionEl.textContent = institution;
-
+  
     const durationEl = document.createElement("div");
     durationEl.className = "duration";
     durationEl.textContent = duration;
-
+  
     const highlightsList = document.createElement("ul");
     highlightsList.className = "education-highlights";
-    
     highlights.forEach(highlight => {
       const li = document.createElement("li");
       li.textContent = highlight;
       highlightsList.appendChild(li);
     });
-
+  
     section.appendChild(degreeEl);
     section.appendChild(institutionEl);
     section.appendChild(durationEl);
     section.appendChild(highlightsList);
-    
-    // Add separator
-    const separator = document.createElement("hr");
-    separator.className = "education-separator";
-    section.appendChild(separator);
-
+  
     educationContainer.appendChild(section);
   });
-
+  
+  /* Certificates Section */
+  const certificatesContainer = document.getElementById("certificates-container");
+  certificates.forEach(({ title, provider, year, description }) => {
+    const section = document.createElement("div");
+    section.className = "certificate-item";
+  
+    const titleEl = document.createElement("h3");
+    titleEl.textContent = title;
+  
+    const providerEl = document.createElement("div");
+    providerEl.className = "provider";
+    providerEl.textContent = provider;
+  
+    const yearEl = document.createElement("div");
+    yearEl.className = "year";
+    yearEl.textContent = year;
+  
+    const descriptionEl = document.createElement("div");
+    descriptionEl.className = "description";
+    descriptionEl.textContent = description;
+  
+    section.appendChild(titleEl);
+    section.appendChild(providerEl);
+    section.appendChild(yearEl);
+    section.appendChild(descriptionEl);
+  
+    certificatesContainer.appendChild(section);
+  });
+  
   /* Project Section */
   const projectContainer = document.getElementById("project-container");
   projectContainer.innerHTML = projectHtml;
 });
-
+  
 /* ==== Particle Background in Left & Right Margins ==== */
 (function () {
   const canvas = document.getElementById("particle-canvas");
   if (!canvas) return;
   const ctx = canvas.getContext("2d");
-
+  
   let width, height, marginX;
   const PARTICLE_COUNT = 64;
   const MAX_DIST = 120;
   const particles = [];
   const mouse = { x: NaN, y: NaN };
-
+  
   function resize() {
     width = window.innerWidth;
     height = window.innerHeight;
@@ -302,7 +363,7 @@ window.addEventListener("DOMContentLoaded", () => {
   }
   window.addEventListener("resize", resize);
   resize();
-
+  
   function randomParticle() {
     // Spawn only inside margins
     const x = Math.random() < 0.5
@@ -315,41 +376,41 @@ window.addEventListener("DOMContentLoaded", () => {
       vy: (Math.random() - 0.5) * 0.4,
     };
   }
-
+  
   for (let i = 0; i < PARTICLE_COUNT; i++) particles.push(randomParticle());
-
+  
   window.addEventListener("mousemove", (e) => {
     mouse.x = e.clientX;
     mouse.y = e.clientY;
   });
-
+  
   function inMargin(x) {
     return x < marginX || x > width - marginX;
   }
-
+  
   function step() {
     ctx.clearRect(0, 0, width, height);
-
+  
     // update & draw particles
     particles.forEach((p) => {
       p.x += p.vx;
       p.y += p.vy;
-
+  
       // bounce vertically in viewport
       if (p.y < 0 || p.y > height) p.vy *= -1;
-
+  
       // respawn if particle leaves margin horizontally
       if (!inMargin(p.x)) {
         Object.assign(p, randomParticle());
       }
-
+  
       // draw dot
       ctx.fillStyle = "#8A2BE2";
       ctx.beginPath();
       ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
       ctx.fill();
     });
-
+  
     // draw connections between particles
     ctx.strokeStyle = "rgba(138,43,226,0.3)";
     for (let i = 0; i < PARTICLE_COUNT; i++) {
@@ -369,7 +430,7 @@ window.addEventListener("DOMContentLoaded", () => {
         }
       }
     }
-
+  
     // connect particles to mouse if mouse is in margin
     if (!isNaN(mouse.x) && inMargin(mouse.x)) {
       particles.forEach((p) => {
@@ -386,7 +447,7 @@ window.addEventListener("DOMContentLoaded", () => {
         }
       });
     }
-
+  
     ctx.globalAlpha = 1;
     requestAnimationFrame(step);
   }
